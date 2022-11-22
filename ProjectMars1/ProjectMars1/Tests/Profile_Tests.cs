@@ -50,6 +50,15 @@ namespace ProjectMars1.Tests
         }
 
 
+        [TearDown]
+
+        public void CloseTestRun()
+        {
+            driver.Quit();
+        }
+
+
+
 
     }
 }

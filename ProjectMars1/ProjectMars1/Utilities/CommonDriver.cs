@@ -24,30 +24,9 @@ namespace ProjectMars1.Utilities
             loginPageObj = new LoginPage();
         }
 
-        [OneTimeTearDown]
-
-        public void CloseTestRun()
-        {
-            driver.Quit();
-        }
-
-
-
-
-
-
-
-
-
     }
 
-    //[OneTimeSetUp]
-
-    //public static void FirstPage(IWebDriver driver)
-    //{
-        //driver = new ChromeDriver();
-    //}
-
+    
 
 
 }
