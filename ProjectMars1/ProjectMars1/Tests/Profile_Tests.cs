@@ -50,19 +50,5 @@ namespace ProjectMars1.Tests
         }
 
 
-
-        [Test, Order(4)]
-        public void AddSkillTest()
-        {
-            ProfilePage profilePageObj = new ProfilePage();
-            //profilePageObj.AddSkills(driver);
-        }
-        [TearDown]
-        public void CloseTestRun()
-        {
-            //driver.Quit();
-        }
-
-
     }
 }

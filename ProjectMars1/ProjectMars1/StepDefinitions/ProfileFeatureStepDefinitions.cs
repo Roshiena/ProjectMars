@@ -73,19 +73,5 @@ namespace ProjectMars1.StepDefinitions
 
         }
 
-        [When(@"I add '([^']*)' to profile")]
-        public void WhenIAddToProfile(string skills)
-        {
-            profilePageObj.AddSkills(driver, skills);
-        }
-
-        [Then(@"The '([^']*)' should be added to the profile successfully")]
-        public void ThenTheShouldBeAddedToTheProfileSuccessfully(string skills)
-        {
-            string newSkills = profilePageObj.NewSkills(driver);
-            Assert.That(newSkills == skills, "Actual skills and expected skills do not match");
-        }
-
-
     }
 }
