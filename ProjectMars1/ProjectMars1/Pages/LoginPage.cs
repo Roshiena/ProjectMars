@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ProjectMars1.Utilities;
 using Microsoft.VisualStudio.TestPlatform.ObjectModel;
+using ProjectMars1.Input;
 
 namespace ProjectMars1.Pages
 {
@@ -24,10 +25,10 @@ namespace ProjectMars1.Pages
             signIn.Click();
 
             IWebElement emailId = driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/div/div[1]/input"));
-            emailId.SendKeys("testingroro5@gmail.com");
+            emailId.SendKeys(LoginCredentials.userName);
 
             IWebElement passwordTextbox = driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/div/div[2]/input"));
-            passwordTextbox.SendKeys("Podidonkey");
+            passwordTextbox.SendKeys(LoginCredentials.passWord);
 
             //Click login button
 

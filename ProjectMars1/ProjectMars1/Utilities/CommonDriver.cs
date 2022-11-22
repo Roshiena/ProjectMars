@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using ProjectMars1.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,33 @@ namespace ProjectMars1.Utilities
 {
     public class CommonDriver
     {
-        public static IWebDriver driver;
+        public IWebDriver driver;
+
+        LoginPage loginPageObj = new LoginPage();
+
+        [OneTimeSetUp]
+
+        public void Login()
+        {
+            driver = new ChromeDriver();
+            loginPageObj = new LoginPage();
+        }
+
+        [OneTimeTearDown]
+
+        public void CloseTestRun()
+        {
+            driver.Quit();
+        }
+
+
+
+
+
+
+
+
+
     }
 
     //[OneTimeSetUp]
